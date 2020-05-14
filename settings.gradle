@@ -1,0 +1,2 @@
+rootProject.name='Jackman Memory Trainer'
+include ':app'
