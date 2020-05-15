@@ -11,9 +11,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val difficultys = resources.getStringArray(R.array.difficulty)
-        val menu = Spinner(findViewById(R.id.difficulty))
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, difficultys )
+        val difficulties = resources.getStringArray(R.array.difficulty)
+        val menu :Spinner = findViewById(R.id.optionsMenu)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, difficulties )
         menu.adapter = adapter
 
     }
