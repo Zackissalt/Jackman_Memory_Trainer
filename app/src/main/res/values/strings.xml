@@ -8,4 +8,6 @@
         <item>Hard</item>
     </string-array>
     <string name="start">Start</string>
+    <string name="memorize">Memorize...</string>
+    <string name="thirty">30</string>
 </resources>
