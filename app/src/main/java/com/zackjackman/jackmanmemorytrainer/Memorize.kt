@@ -13,8 +13,13 @@ class Memorize : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_memorize)
 
+        val difficulty  = (intent.extras.getInt("difficulty") + 1) * 3
+        val colors = ColorGenerator(difficulty)
+
+
 
 
     }
+
 
 }
