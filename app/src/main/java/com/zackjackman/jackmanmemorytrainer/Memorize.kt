@@ -14,6 +14,7 @@ class Memorize : AppCompatActivity() {
         setContentView(R.layout.activity_memorize)
 
 
+
     }
 
 }
