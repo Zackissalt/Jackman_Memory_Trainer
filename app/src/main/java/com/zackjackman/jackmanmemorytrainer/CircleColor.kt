@@ -1,15 +1,15 @@
 package com.zackjackman.jackmanmemorytrainer
 
-class CircleColor(private val circle: Int) {
+class CircleColor() {
 
 
-    fun getColor():Int{
+    fun getColor(circle:Int):Int{
         return when(circle){
-            1-> R.color.blue
-            2-> R.color.red
-            3-> R.color.yellow
-            4-> R.color.green
-            5-> R.color.orange
+            0-> R.color.blue
+            1-> R.color.red
+            2-> R.color.yellow
+            3-> R.color.green
+            4-> R.color.orange
             else -> R.color.purple
         }
 
