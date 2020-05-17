@@ -22,7 +22,9 @@ class Memorize : AppCompatActivity() {
         val adapter = ColorViewAdapter(this, colorsId )
         colorGrid.adapter = adapter
         val intent = Intent(this, Recall::class.java)
-        intent.putExtra("colors", colorsId  )
+        val bundle = Bundle()
+        bundle.putIntegerArrayList("colors", colorsId)
+        intent.putExtra("bundle", bundle  )
 
         val countdown = object : CountDownTimer(30000,1000) {
             override fun onTick(millisUntilFinished: Long) {
