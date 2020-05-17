@@ -1,18 +1,23 @@
 package com.zackjackman.jackmanmemorytrainer
 
+import android.content.Context
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Spinner
+import androidx.core.content.ContextCompat
 import androidx.core.view.iterator
 
-class Evaluator(val group: ViewGroup, val memColors: ArrayList<Int>) {
-
+class Evaluator(val context: Context, val group: ViewGroup, val memColors: ArrayList<Int>) {
+    val color = CircleColor()
     fun compareColors():ArrayList<Boolean>{
         val answers = ArrayList<Boolean>()
         for (view in group ) {
             val menu = view.findViewById<Spinner>(R.id.circle_spinner)
                 if(menu is Spinner){
-                    answers.add(menu.selectedItemPosition == memColors[group.indexOfChild(view)])
+                    val spinnerColor = memColors[group.indexOfChild(view)]
+                    answers.add(menu.selectedItemPosition == spinnerColor)
+                    view.setBackgroundColor((ContextCompat.getColor(context, color.getColor(spinnerColor))))
+
                 }
 
         }

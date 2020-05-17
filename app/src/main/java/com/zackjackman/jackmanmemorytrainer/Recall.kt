@@ -20,7 +20,7 @@ class Recall : AppCompatActivity() {
         val colors = ColorGenerator().getColorIdList(colorNumbers)
         val adapter = ColorSpinnerAdapter(this, colors )
         colorGrid.adapter = adapter
-        val evaluator = Evaluator(colorGrid, colorNumbers)
+        val evaluator = Evaluator(this, colorGrid, colorNumbers)
         val commit : Button = findViewById(R.id.commit)
         var switch = false
         commit.setOnClickListener {
