@@ -22,9 +22,17 @@ class Recall : AppCompatActivity() {
         colorGrid.adapter = adapter
         val evaluator = Evaluator(colorGrid, colorNumbers)
         val commit : Button = findViewById(R.id.commit)
+        var switch = false
         commit.setOnClickListener {
-            findViewById<TextView>(R.id.match).text = evaluator.getPercentRight().toString()  + "%"
-            commit.setText(R.string.again)
+            if (switch) {
+                val intent = Intent(this, MainActivity::class.java)
+                this.startActivity(intent)
+            } else {
+                findViewById<TextView>(R.id.match).text =
+                    evaluator.getPercentRight().toString() + "%"
+                commit.setText(R.string.again)
+                switch = true
+            }
         }
 
     }
