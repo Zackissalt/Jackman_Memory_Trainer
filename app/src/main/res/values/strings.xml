@@ -8,8 +8,8 @@
         <item>Hard</item>
     </string-array>
     <string name="start">Start</string>
-    <string name="memorize">Memorize...</string>
-    <string name="thirty">30</string>
+    <string name="memorize">Memorize…</string>
+    <string name="time_left">30</string>
     <string name="solid_circle_spinner">solid circle spinner</string>
     <string name="solid_circle">solid circle</string>
 </resources>
