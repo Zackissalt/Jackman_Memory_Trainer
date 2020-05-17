@@ -17,14 +17,14 @@ class Memorize : AppCompatActivity() {
         setContentView(R.layout.activity_memorize)
 
         val difficulty  = (intent.extras.getInt("difficulty") + 1) * 3
-        val colors = ColorGenerator(difficulty)
-        val colorsId= colors.getColorIdList()
+        val colors = ColorGenerator()
+        val colorsId= colors.getColorIdList(difficulty)
+        val colorsNumbers = colors.getList()
         val adapter = ColorViewAdapter(this, colorsId )
         colorGrid.adapter = adapter
         val intent = Intent(this, Recall::class.java)
         val bundle = Bundle()
-        bundle.putIntegerArrayList("colors", colorsId)
-        bundle.putIntegerArrayList("colorsNumbers", colors.getList())
+        bundle.putIntegerArrayList("colorsNumbers", colorsNumbers)
         intent.putExtra("bundle", bundle  )
 
         val countdown = object : CountDownTimer(30000,1000) {
