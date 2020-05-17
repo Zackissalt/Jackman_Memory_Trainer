@@ -2,15 +2,11 @@ package com.zackjackman.jackmanmemorytrainer
 
 import kotlin.math.round
 
-class ColorGenerator(private val difficulty : Int) {
+class ColorGenerator() {
     private var circles = ArrayList<Int>()
     private var colorRead = CircleColor()
-    init {
-        randomizeColors()
 
-    }
-
-    private fun randomizeColors(){
+    private fun randomizeColors(difficulty : Int){
 
         do {
             val random = (Math.random() * 6).toInt()
@@ -28,6 +24,14 @@ class ColorGenerator(private val difficulty : Int) {
             colorIdList.add(getColorId(randomColor))
         }
         return colorIdList
+    }
+    fun getColorIdList(difficulty : Int):ArrayList<Int>{
+        randomizeColors(difficulty)
+        return getColorIdList()
+    }
 
+    fun getColorIdList(colors: ArrayList<Int>):ArrayList<Int>{
+        circles = colors
+        return getColorIdList()
     }
 }
