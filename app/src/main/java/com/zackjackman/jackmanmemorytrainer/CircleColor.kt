@@ -1,18 +1,23 @@
 package com.zackjackman.jackmanmemorytrainer
 
 class CircleColor() {
-
+    val colors = ArrayList<Int>()
+    init {
+        colors.add(R.color.blue)
+        colors.add(R.color.red)
+        colors.add(R.color.yellow)
+        colors.add(R.color.green)
+        colors.add(R.color.orange)
+        colors.add(R.color.purple)
+    }
 
     fun getColor(circle:Int):Int{
-        return when(circle){
-            0-> R.color.blue
-            1-> R.color.red
-            2-> R.color.yellow
-            3-> R.color.green
-            4-> R.color.orange
-            else -> R.color.purple
-        }
+        return colors[circle]
 
+    }
+
+    fun getColorArray():ArrayList<Int>{
+        return colors
     }
 
 
