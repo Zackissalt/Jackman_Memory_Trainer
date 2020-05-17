@@ -24,6 +24,7 @@ class Memorize : AppCompatActivity() {
         val intent = Intent(this, Recall::class.java)
         val bundle = Bundle()
         bundle.putIntegerArrayList("colors", colorsId)
+        bundle.putIntegerArrayList("colorsNumbers", colors.getList())
         intent.putExtra("bundle", bundle  )
 
         val countdown = object : CountDownTimer(30000,1000) {
