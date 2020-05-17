@@ -20,7 +20,7 @@ class ColorGenerator(private val difficulty : Int) {
 
     fun getList():ArrayList<Int> { return circles }
 
-    fun getColorId(circleNumber : Int):Int{ return colorRead.getColor(circles[circleNumber])}
+    fun getColorId(circleNumber : Int):Int{ return colorRead.getColor(circleNumber)}
 
     fun getColorIdList():ArrayList<Int>{
         val colorIdList = ArrayList<Int>()

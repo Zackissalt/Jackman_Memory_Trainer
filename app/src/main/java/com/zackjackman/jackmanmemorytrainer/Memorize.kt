@@ -15,7 +15,7 @@ class Memorize : AppCompatActivity() {
 
         val difficulty  = (intent.extras.getInt("difficulty") + 1) * 3
         val colors = ColorGenerator(difficulty)
-        var adapter = ColorViewAdapter(this, colors.getColorIdList())
+        val adapter = ColorViewAdapter(this, colors.getColorIdList())
         colorGrid.adapter = adapter
 
 
