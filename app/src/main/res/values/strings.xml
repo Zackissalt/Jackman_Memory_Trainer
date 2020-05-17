@@ -12,4 +12,6 @@
     <string name="time_left">30</string>
     <string name="solid_circle_spinner">solid circle spinner</string>
     <string name="solid_circle">solid circle</string>
+    <string name="commit">Commit Answers</string>
+    <string name="recall">Match the colors to what you remember</string>
 </resources>
