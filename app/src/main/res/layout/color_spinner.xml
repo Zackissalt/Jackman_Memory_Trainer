@@ -7,8 +7,8 @@
     android:background="@color/grey"
     android:paddingLeft="3dp"
     android:paddingTop="3dp"
-    android:paddingEnd="3dp"
-    android:paddingRight="3dp">
+    android:paddingRight="3dp"
+    android:paddingBottom="3dp">
 
     <Spinner
         android:id="@+id/circle_spinner"
