@@ -9,7 +9,7 @@
 
     <GridView
         android:id="@+id/colorGrid"
-        android:layout_width="wrap_content"
+        android:layout_width="272dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="#000000"
@@ -25,12 +25,14 @@
         android:id="@+id/match"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/recall"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/commit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorGrid" />
 
     <Button
         android:id="@+id/commit"
