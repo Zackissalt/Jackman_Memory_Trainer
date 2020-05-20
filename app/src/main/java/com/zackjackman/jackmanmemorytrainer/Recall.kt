@@ -15,8 +15,8 @@ class Recall : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recall)
-        val bundle : Bundle = intent.extras.getBundle("bundle")
-        val colorNumbers : ArrayList<Int> = bundle.getIntegerArrayList("colorsNumbers")
+        val bundle : Bundle = intent.extras!!.getBundle("bundle")!!
+        val colorNumbers : ArrayList<Int> = bundle.getIntegerArrayList("colorsNumbers") as ArrayList<Int>
         val colors = ColorGenerator().getColorIdList(colorNumbers)
         val adapter = ColorSpinnerAdapter(this, colors )
         colorGrid.adapter = adapter

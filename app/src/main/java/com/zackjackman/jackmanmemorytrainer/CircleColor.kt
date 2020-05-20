@@ -1,6 +1,6 @@
 package com.zackjackman.jackmanmemorytrainer
 
-class CircleColor() {
+class CircleColor {
     val colors = ArrayList<Int>()
     init {
         colors.add(R.color.blue)

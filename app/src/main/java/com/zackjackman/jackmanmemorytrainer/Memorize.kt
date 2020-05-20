@@ -9,16 +9,16 @@ import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_memorize.*
 
 
-@Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
+
 class Memorize : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_memorize)
 
-        val difficulty  = (intent.extras.getInt("difficulty") + 1) * 3
+        val difficulty  = ((intent.extras!!.getInt("difficulty")) + 1) * 3
         val colors = ColorGenerator()
-        val colorsId= colors.getColorIdList(difficulty)
+        val colorsId : ArrayList<Int> = colors.getColorIdList(difficulty)
         val colorsNumbers = colors.getList()
         val adapter = ColorViewAdapter(this, colorsId )
         colorGrid.adapter = adapter

@@ -2,7 +2,7 @@ package com.zackjackman.jackmanmemorytrainer
 
 import kotlin.math.round
 
-class ColorGenerator() {
+class ColorGenerator {
     private var circles = ArrayList<Int>()
     private var colorRead = CircleColor()
 
